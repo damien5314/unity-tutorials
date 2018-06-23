@@ -2,33 +2,32 @@
 
 public class FpsMovement : MonoBehaviour
 {
+	public float MovementSpeed = 6.0f;
+	public float Gravity = -9.8f;
 
-    public float MovementSpeed = 6.0f;
-    public float Gravity = -9.8f;
+	private CharacterController _characterController;
 
-    private CharacterController _characterController;
+	void Start()
+	{
+		_characterController = GetComponent<CharacterController>();
+	}
 
-    void Start()
-    {
-        _characterController = GetComponent<CharacterController>();
-    }
+	void Update()
+	{
+		float deltaX = Input.GetAxis("Horizontal") * MovementSpeed;
+		float deltaZ = Input.GetAxis("Vertical") * MovementSpeed;
 
-    void Update()
-    {
-        float deltaX = Input.GetAxis("Horizontal") * MovementSpeed;
-        float deltaZ = Input.GetAxis("Vertical") * MovementSpeed;
-        
-        // Clamp the magnitude so player doesn't move faster when walking diagonally
-        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-        movement = Vector3.ClampMagnitude(movement, MovementSpeed);
-        movement.y = Gravity;
-        
-        // Adjust for the framerate of the machine
-        movement *= Time.deltaTime;
+		// Clamp the magnitude so player doesn't move faster when walking diagonally
+		Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+		movement = Vector3.ClampMagnitude(movement, MovementSpeed);
+		movement.y = Gravity;
 
-        movement = transform.TransformDirection(movement);
+		// Adjust for the framerate of the machine
+		movement *= Time.deltaTime;
 
-        // Perform the translation
-        _characterController.Move(movement);
-    }
+		movement = transform.TransformDirection(movement);
+
+		// Perform the translation
+		_characterController.Move(movement);
+	}
 }
