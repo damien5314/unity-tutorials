@@ -11,6 +11,9 @@ public class WanderingAi : MonoBehaviour
 
 	private bool _alive;
 
+	[SerializeField] private GameObject _fireballPrefab;
+	private GameObject _fireball;
+
 	void Start()
 	{
 		_alive = true;
@@ -20,17 +23,27 @@ public class WanderingAi : MonoBehaviour
 	{
 		if (_alive)
 		{
-			// Why does this always use the Z coordinate? Because it's relative space?
 			transform.Translate(0, 0, Speed * Time.deltaTime);
 		
 			Ray ray = new Ray(transform.position, transform.forward);
 			RaycastHit hit;
 			if (Physics.SphereCast(ray, 0.75f, out hit))
 			{
-				if (hit.distance < ObstacleRange)
+				// Enemy releases a fireball toward the PlayerCharacter
+				GameObject hitObject = hit.transform.gameObject;
+				if (hitObject.GetComponent<PlayerCharacter>())
+				{
+					if (_fireball == null)
+					{
+						_fireball = Instantiate(_fireballPrefab);
+						_fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
+						_fireball.transform.rotation = transform.rotation;
+					}
+				}
+				// Makes the enemy avoid non-player obstacles
+				else if (hit.distance < ObstacleRange)
 				{
 					float angle = Random.Range(-110, 110);
-					// Rotating around the Y so that causes the model to rotate horizontally
 					transform.Rotate(0, angle, 0);
 				}
 			}
