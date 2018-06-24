@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : MonoBehaviour {
+public class PlayerCharacter : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public int Health = 5;
 	
-	// Update is called once per frame
-	void Update () {
-		
+	private int _remainingHealth;
+
+	void Start()
+	{
+		_remainingHealth = Health;
+	}
+
+	public void Hurt(int damage)
+	{
+		_remainingHealth -= damage;
+		Debug.Log("Health: " + _remainingHealth);
 	}
 }

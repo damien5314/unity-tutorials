@@ -15,6 +15,12 @@ public class Fireball : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		// TODO
+		PlayerCharacter player = other.GetComponent<PlayerCharacter>();
+		if (player != null)
+		{
+			player.Hurt(Damage);
+		}
+
+		Destroy(gameObject);
 	}
 }
