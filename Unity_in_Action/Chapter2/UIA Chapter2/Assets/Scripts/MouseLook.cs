@@ -2,9 +2,10 @@
 
 [RequireComponent(typeof(CharacterController))]
 [AddComponentMenu("Control Script/FPS Input")]
-public class MouseLook : MonoBehaviour {
-	
-	public enum RotationAxes {
+public class MouseLook : MonoBehaviour
+{
+	public enum RotationAxes
+	{
 		MouseXY = 0,
 		MouseX = 1,
 		MouseY = 2
@@ -26,14 +27,14 @@ public class MouseLook : MonoBehaviour {
 			rigidbody.freezeRotation = true;
 		}
 	}
-	
-	void Update() 
+
+	void Update()
 	{
 		if (Axes == RotationAxes.MouseX)
 		{
 			float delta = Input.GetAxis("Mouse X") * HorizontalSensitivity;
 			float rotationY = transform.localEulerAngles.y + delta;
-			
+
 			transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, 0);
 		}
 		else if (Axes == RotationAxes.MouseY)
@@ -50,7 +51,7 @@ public class MouseLook : MonoBehaviour {
 
 			float delta = Input.GetAxis("Mouse X") * HorizontalSensitivity;
 			float rotationY = transform.localEulerAngles.y + delta;
-			
+
 			transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
 		}
 	}
