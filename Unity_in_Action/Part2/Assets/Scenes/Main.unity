@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -113,6 +113,223 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &122823159
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468890350688762, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_Name
+      value: Southwest Room Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 242324197928e4ec29663e993609f11a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &242659713
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468890350688762, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_Name
+      value: Northeast Room Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 242324197928e4ec29663e993609f11a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &242659714 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a,
+    type: 2}
+  m_PrefabInternal: {fileID: 242659713}
+--- !u!1001 &287313061
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_Name
+      value: West X Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &287313062 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_PrefabInternal: {fileID: 287313061}
+--- !u!1001 &338118495
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_Name
+      value: West Z Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &338118496 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_PrefabInternal: {fileID: 338118495}
 --- !u!1001 &760203907
 Prefab:
   m_ObjectHideFlags: 0
@@ -233,6 +450,71 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
   m_PrefabInternal: {fileID: 803580910}
+--- !u!1 &836870828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 836870829}
+  - component: {fileID: 836870830}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &836870829
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836870828}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1680482858}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &836870830
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836870828}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 16
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &937622916
 Prefab:
   m_ObjectHideFlags: 0
@@ -291,6 +573,57 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
   m_PrefabInternal: {fileID: 937622916}
+--- !u!1001 &995040607
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468890350688762, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_Name
+      value: Northwest Room Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 242324197928e4ec29663e993609f11a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &995040608 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a,
+    type: 2}
+  m_PrefabInternal: {fileID: 995040607}
 --- !u!1001 &1012908675
 Prefab:
   m_ObjectHideFlags: 0
@@ -353,71 +686,177 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
   m_PrefabInternal: {fileID: 1012908675}
---- !u!1 &1406737688
-GameObject:
+--- !u!1001 &1054871594
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1406737690}
-  - component: {fileID: 1406737689}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1406737689
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1406737688}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1406737690
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468890350688762, guid: 242324197928e4ec29663e993609f11a, type: 2}
+      propertyPath: m_Name
+      value: Southeast Room Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 242324197928e4ec29663e993609f11a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1054871595 stripped
 Transform:
+  m_PrefabParentObject: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054871594}
+--- !u!1001 &1127450236
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1406737688}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_Name
+      value: Northeast Z Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1127450237 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_PrefabInternal: {fileID: 1127450236}
+--- !u!1001 &1415068769
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_Name
+      value: East X Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1415068770 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_PrefabInternal: {fileID: 1415068769}
 --- !u!1 &1544828542
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +1026,79 @@ Transform:
   - {fileID: 1639635016}
   - {fileID: 1012908676}
   - {fileID: 760203908}
+  - {fileID: 287313062}
+  - {fileID: 1415068770}
+  - {fileID: 338118496}
+  - {fileID: 1127450237}
+  - {fileID: 2072500057}
+  - {fileID: 836870829}
+  - {fileID: 2042102032}
+  - {fileID: 995040608}
+  - {fileID: 242659714}
+  - {fileID: 1054871595}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2042102032 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4138716472128736, guid: 242324197928e4ec29663e993609f11a,
+    type: 2}
+  m_PrefabInternal: {fileID: 122823159}
+--- !u!1001 &2072500056
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1680482858}
+    m_Modifications:
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_Name
+      value: Southeast Z Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2072500057 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: 6cda027d3ccdb42768458d0e06b9d224, type: 2}
+  m_PrefabInternal: {fileID: 2072500056}
