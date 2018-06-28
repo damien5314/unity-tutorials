@@ -9,9 +9,13 @@ public class SceneController : MonoBehaviour
 	public const int GridColumns = 4;
 	public const float OffsetX = 2.0f;
 	public const float OffsetY = 2.5f;
+	public const float ResultCheckDelay = 0.5f;
 
 	[SerializeField] private MemoryCard _originalCard;
 	[SerializeField] private Sprite[] _images;
+
+	private MemoryCard _firstRevealed, _secondRevealed;
+	private int _score = 0;
 
 	void Start()
 	{
@@ -37,7 +41,7 @@ public class SceneController : MonoBehaviour
 
 				int index = j * GridColumns + i;
 				int id = numbers[index];
-				_originalCard.SetCard(id, _images[id]);
+				card.SetCard(id, _images[id]);
 
 				float posX = card.transform.position.x + (OffsetX * i);
 				float posY = card.transform.position.y + -(OffsetY * j);
@@ -58,5 +62,46 @@ public class SceneController : MonoBehaviour
 		}
 
 		return shuffled;
+	}
+
+	public bool CanReveal
+	{
+		get { return _secondRevealed == null; }
+	}
+
+	public void CardRevealed(MemoryCard card)
+	{
+		if (_firstRevealed == null)
+		{
+			_firstRevealed = card;
+		}
+		else if (_secondRevealed == null)
+		{
+			_secondRevealed = card;
+			CheckMatchResult();
+		}
+	}
+
+	private void CheckMatchResult()
+	{
+		bool matched = _firstRevealed.Id == _secondRevealed.Id;
+		StartCoroutine(OnCardsMatched(matched));
+	}
+
+	private IEnumerator OnCardsMatched(bool matched)
+	{
+		if (matched)
+		{
+			_score++;
+		}
+		else
+		{
+			yield return new WaitForSeconds(ResultCheckDelay);
+			_firstRevealed.Unreveal();
+			_secondRevealed.Unreveal();	
+		}
+
+		_firstRevealed = null;
+		_secondRevealed = null;
 	}
 }

@@ -25,9 +25,15 @@ public class MemoryCard : MonoBehaviour
 	private void OnMouseDown()
 	{
 		// What's the difference between active and activeSelf?
-		if (_cardBack.activeSelf)
+		if (_cardBack.activeSelf && _sceneController.CanReveal)
 		{
 			_cardBack.SetActive(false);
+			_sceneController.CardRevealed(this);
 		}
+	}
+
+	public void Unreveal()
+	{
+		_cardBack.SetActive(true);
 	}
 }
