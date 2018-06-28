@@ -13,6 +13,7 @@ public class SceneController : MonoBehaviour
 
 	[SerializeField] private MemoryCard _originalCard;
 	[SerializeField] private Sprite[] _images;
+	[SerializeField] private TextMesh _scoreLabel;
 
 	private MemoryCard _firstRevealed, _secondRevealed;
 	private int _score = 0;
@@ -48,6 +49,8 @@ public class SceneController : MonoBehaviour
 				card.transform.position = new Vector3(posX, posY, startPosition.z);
 			}
 		}
+
+		SetScore(0);
 	}
 
 	private int[] ShuffleArray(int[] array)
@@ -92,7 +95,7 @@ public class SceneController : MonoBehaviour
 	{
 		if (matched)
 		{
-			_score++;
+			SetScore(_score + 1);
 		}
 		else
 		{
@@ -103,5 +106,11 @@ public class SceneController : MonoBehaviour
 
 		_firstRevealed = null;
 		_secondRevealed = null;
+	}
+
+	private void SetScore(int score)
+	{
+		_score = score;
+		_scoreLabel.text = "スコア: " + score;
 	}
 }
