@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
@@ -112,5 +113,10 @@ public class SceneController : MonoBehaviour
 	{
 		_score = score;
 		_scoreLabel.text = "スコア: " + score;
+	}
+
+	public void Restart()
+	{
+		SceneManager.LoadScene("Main");
 	}
 }
