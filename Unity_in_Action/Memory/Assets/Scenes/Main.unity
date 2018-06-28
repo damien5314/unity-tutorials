@@ -184,7 +184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865603583
 GameObject:
@@ -258,7 +258,53 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1521973258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1521973260}
+  - component: {fileID: 1521973259}
+  m_Layer: 0
+  m_Name: Scene Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1521973259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521973258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2433d94265c24a9794ffd63092bb8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _originalCard: {fileID: 1973803708}
+  _images:
+  - {fileID: 21300000, guid: 8d6754846ead34f2380cce6d841852a4, type: 3}
+  - {fileID: 21300000, guid: 571e7f5cb6d8d4f92825fe22e77e1b7b, type: 3}
+  - {fileID: 21300000, guid: a46a620e2ea5b429cac443cdc752d0c5, type: 3}
+  - {fileID: 21300000, guid: ef107fa41ea624c23b52388da835e4eb, type: 3}
+--- !u!4 &1521973260
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521973258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.18369602, y: -0.15497427, z: -1.107557}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973803704
 GameObject:
@@ -335,7 +381,7 @@ Transform:
   m_Children:
   - {fileID: 2140854648}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1973803707
 BoxCollider2D:
@@ -374,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardBack: {fileID: 2140854647}
+  _sceneController: {fileID: 1521973259}
 --- !u!1 &2140854647
 GameObject:
   m_ObjectHideFlags: 0
