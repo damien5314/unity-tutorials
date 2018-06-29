@@ -936,7 +936,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0.01
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!4 &857612721
 Transform:
@@ -1518,6 +1518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1122260914}
   - component: {fileID: 1122260915}
+  - component: {fileID: 1122260916}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1551,6 +1552,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 1165698815406406, guid: 0c857af20414f445192456743d4251e2,
     type: 2}
+--- !u!114 &1122260916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1122260913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd8789c7d87e4338aa492d20d6aeb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreLabel: {fileID: 472575126}
 --- !u!1 &1179471229
 GameObject:
   m_ObjectHideFlags: 0
