@@ -16,4 +16,9 @@ public class UiController : MonoBehaviour
 	{
 		Debug.Log("Opened settings");
 	}
+
+	public void OnPointerDown()
+	{
+		Debug.Log("Pointer down");
+	}
 }
