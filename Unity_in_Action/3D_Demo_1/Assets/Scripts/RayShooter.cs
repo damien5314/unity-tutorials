@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
@@ -12,14 +13,15 @@ public class RayShooter : MonoBehaviour
 		_camera = GetComponent<Camera>();
 
 		// Hides the mouse cursor at the center of the screen
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		// Removing to allow usage of the GUI
+//		Cursor.lockState = CursorLockMode.Locked;
+//		Cursor.visible = false;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
 		{
 			Vector3 point = new Vector3(_camera.pixelWidth / 2f, _camera.pixelHeight / 2f, 0);
 			Ray ray = _camera.ScreenPointToRay(point);
