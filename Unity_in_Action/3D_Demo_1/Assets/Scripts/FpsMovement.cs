@@ -23,7 +23,7 @@ public class FpsMovement : MonoBehaviour
 	void Start()
 	{
 		_characterController = GetComponent<CharacterController>();
-		MovementSpeed = BaseSpeed * SettingsManager.Speed;
+		UpdateSpeed(SettingsManager.Speed);
 	}
 
 	void Update()
@@ -47,6 +47,11 @@ public class FpsMovement : MonoBehaviour
 
 	private void OnSpeedChanged(float speed)
 	{
-		MovementSpeed = BaseSpeed * speed;
+		UpdateSpeed(speed);
+	}
+
+	private void UpdateSpeed(float speedSetting)
+	{
+		MovementSpeed = BaseSpeed * speedSetting;
 	}
 }

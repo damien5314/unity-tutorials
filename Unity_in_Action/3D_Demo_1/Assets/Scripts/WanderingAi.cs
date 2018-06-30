@@ -30,7 +30,7 @@ public class WanderingAi : MonoBehaviour
 	void Start()
 	{
 		_alive = true;
-		Speed = BaseSpeed * SettingsManager.Speed;
+		UpdateSpeed(SettingsManager.Speed);
 	}
 
 	void Update()
@@ -71,6 +71,11 @@ public class WanderingAi : MonoBehaviour
 
 	private void OnSpeedChanged(float value)
 	{
-		Speed = BaseSpeed * value;
+		UpdateSpeed(value);
+	}
+
+	private void UpdateSpeed(float speedSetting)
+	{
+		Speed = BaseSpeed * speedSetting;
 	}
 }
