@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UiController : MonoBehaviour
@@ -8,18 +7,34 @@ public class UiController : MonoBehaviour
 	[SerializeField] private Text _scoreLabel;
 	[SerializeField] private SettingsMenu _settingsMenu;
 
-	private void Start()
+	private int _score;
+
+	private void Awake()
 	{
-		_settingsMenu.Close();
+		Messenger.AddListener(GameEvent.EnemyHit, OnEnemyHit);
 	}
 
-	private void Update()
+	private void OnDestroy()
 	{
-		_scoreLabel.text = Time.realtimeSinceStartup.ToString(CultureInfo.CurrentCulture);
+		Messenger.RemoveListener(GameEvent.EnemyHit, OnEnemyHit);
+	}
+
+	private void Start()
+	{
+		_score = 0;
+		_scoreLabel.text = _score.ToString();
+		
+		_settingsMenu.Close();
 	}
 
 	public void OnOpenSettings()
 	{
 		_settingsMenu.Open();
+	}
+
+	private void OnEnemyHit()
+	{
+		_score += 1;
+		_scoreLabel.text = _score.ToString();
 	}
 }
