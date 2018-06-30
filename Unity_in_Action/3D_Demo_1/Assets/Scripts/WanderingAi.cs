@@ -30,6 +30,7 @@ public class WanderingAi : MonoBehaviour
 	void Start()
 	{
 		_alive = true;
+		Speed = BaseSpeed * SettingsManager.Speed;
 	}
 
 	void Update()

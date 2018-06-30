@@ -13,7 +13,6 @@ public class SceneController : MonoBehaviour
 		if (_enemy == null)
 		{
 			_enemy = Instantiate(_enemyPrefab);
-//			_enemy.transform.position = new Vector3(0, 1, 0);
 			_enemy.transform.position = new Vector3(8, 1, -20);
 			float angle = Random.Range(0, 360);
 			_enemy.transform.Rotate(0, angle, 0);
