@@ -2,10 +2,23 @@
 
 public class FpsMovement : MonoBehaviour
 {
+
+	public const float BaseSpeed = 6.0f;
+	
 	public float MovementSpeed = 6.0f;
 	public float Gravity = -9.8f;
 
 	private CharacterController _characterController;
+
+	private void Awake()
+	{
+		Messenger<float>.AddListener(GameEvent.SpeedChanged, OnSpeedChanged);
+	}
+
+	private void OnDestroy()
+	{
+		Messenger<float>.RemoveListener(GameEvent.SpeedChanged, OnSpeedChanged);
+	}
 
 	void Start()
 	{
@@ -29,5 +42,10 @@ public class FpsMovement : MonoBehaviour
 
 		// Perform the translation
 		_characterController.Move(movement);
+	}
+
+	private void OnSpeedChanged(float speed)
+	{
+		MovementSpeed = BaseSpeed * speed;
 	}
 }

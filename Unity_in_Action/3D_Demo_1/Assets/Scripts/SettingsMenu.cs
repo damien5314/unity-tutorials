@@ -34,5 +34,6 @@ public class SettingsMenu : MonoBehaviour
 	public void OnSpeedValue(float speed)
 	{
 		PlayerPrefs.SetFloat(PrefsSpeed, speed);
+		Messenger<float>.Broadcast(GameEvent.SpeedChanged, speed);
 	}
 }
