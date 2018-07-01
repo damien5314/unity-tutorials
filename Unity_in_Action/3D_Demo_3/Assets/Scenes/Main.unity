@@ -697,6 +697,23 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100038, guid: 66e765ee1725e45b4b741dfaaeb5a48b, type: 3}
   m_PrefabInternal: {fileID: 411169569}
+--- !u!143 &803888633
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803888632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.4
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &803888634 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400038, guid: 66e765ee1725e45b4b741dfaaeb5a48b, type: 3}
@@ -713,6 +730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 282840814}
+  RotationSpeed: 15
 --- !u!1 &864076554
 GameObject:
   m_ObjectHideFlags: 0
