@@ -18,11 +18,13 @@ public class RelativeMovement : MonoBehaviour
 	private CharacterController _characterController;
 	private float _verticalSpeed;
 	private ControllerColliderHit _contact;
+	private Animator _animator;
 
 	private void Start()
 	{
 		_characterController = GetComponent<CharacterController>();
 		_verticalSpeed = MinimumFall;
+		_animator = GetComponent<Animator>();
 	}
 
 	private void Update()
@@ -57,6 +59,8 @@ public class RelativeMovement : MonoBehaviour
 			Quaternion direction = Quaternion.LookRotation(movement);
 			transform.rotation = Quaternion.Lerp(transform.rotation, direction, RotationSpeed * Time.deltaTime);
 		}
+
+		_animator.SetFloat("Speed", movement.sqrMagnitude);
 		
 		// Calculate movement in the Y direction
 		bool hitGround = false;
@@ -83,6 +87,7 @@ public class RelativeMovement : MonoBehaviour
 			else
 			{
 				_verticalSpeed = MinimumFall;
+				_animator.SetBool("Jumping", false);
 			}
 		}
 		else
@@ -94,6 +99,11 @@ public class RelativeMovement : MonoBehaviour
 			if (_verticalSpeed < TerminalVelocity)
 			{
 				_verticalSpeed = TerminalVelocity;
+			}
+
+			if (_contact != null)
+			{
+				_animator.SetBool("Jumping", true);
 			}
 
 			// When the raycast downward didn't hit anything, but the player is still "grounded" we run
