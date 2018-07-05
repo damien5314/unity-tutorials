@@ -7,6 +7,8 @@ public class InventoryManager : MonoBehaviour, IGameManager
 {
 	public ManagerStatus status { get; private set; }
 
+	public string EquippedItem { get; private set; }
+
 	private Dictionary<string, int> _items;
 	
 	public void Startup()
@@ -46,6 +48,20 @@ public class InventoryManager : MonoBehaviour, IGameManager
 		}
 
 		DisplayItems();
+	}
+
+	public bool EquipItem(string name)
+	{
+		if (_items.ContainsKey(name) && EquippedItem != name)
+		{
+			EquippedItem = name;
+			Debug.Log("Equipped: " + name);
+			return true;
+		}
+
+		EquippedItem = null;
+		Debug.Log("Unequipped: " + name);
+		return false;
 	}
 
 	public List<string> GetItemList()

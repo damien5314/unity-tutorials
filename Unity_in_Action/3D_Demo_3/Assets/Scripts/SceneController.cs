@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneController : MonoBehaviour {
 	private void Start()
 	{
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+//		Cursor.lockState = CursorLockMode.Locked;
+//		Cursor.visible = false;
 	}
 }
