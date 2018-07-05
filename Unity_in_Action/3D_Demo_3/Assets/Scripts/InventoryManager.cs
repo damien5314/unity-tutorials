@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
@@ -45,5 +46,20 @@ public class InventoryManager : MonoBehaviour, IGameManager
 		}
 
 		DisplayItems();
+	}
+
+	public List<string> GetItemList()
+	{
+		return _items.Keys.ToList();
+	}
+
+	public int GetItemCount(string name)
+	{
+		if (_items.ContainsKey(name))
+		{
+			return _items[name];
+		}
+
+		return 0;
 	}
 }
