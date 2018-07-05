@@ -64,6 +64,24 @@ public class InventoryManager : MonoBehaviour, IGameManager
 		return false;
 	}
 
+	public bool ConsumeItem(string name)
+	{
+		if (_items.ContainsKey(name))
+		{
+			_items[name]--;
+			if (_items[name] == 0)
+			{
+				_items.Remove(name);
+			}
+		
+			DisplayItems();
+			return true;
+		}
+
+		Debug.Log("Cannot consume " + name);
+		return false;
+	}
+
 	public List<string> GetItemList()
 	{
 		return _items.Keys.ToList();

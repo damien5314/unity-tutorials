@@ -19,13 +19,13 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
 	public void ChangeHealth(int value)
 	{
-		Health = value;
+		Health += value;
 
-		if (value > MaxHealth)
+		if (Health > MaxHealth)
 		{
 			Health = MaxHealth;
 		} 
-		else if (value < 0)
+		else if (Health < 0)
 		{
 			Health = 0;
 		}
