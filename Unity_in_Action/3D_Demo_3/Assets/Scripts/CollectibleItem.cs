@@ -5,11 +5,11 @@ using UnityEngine;
 public class CollectibleItem : MonoBehaviour
 {
 
-	[SerializeField] private string itemName;
+	[SerializeField] private string _itemName;
 
 	private void OnTriggerEnter(Collider other)
 	{
-		GameManagers.Inventory.AddItem(itemName);
+		GameManagers.Inventory.AddItem(_itemName);
 		Destroy(gameObject);
 	}
 }

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523de4ba549534371857bb730466f4a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: ore
+  _itemName: ore
 --- !u!135 &135446653078659042
 SphereCollider:
   m_ObjectHideFlags: 1
