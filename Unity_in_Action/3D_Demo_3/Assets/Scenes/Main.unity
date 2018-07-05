@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 593029227}
   - component: {fileID: 593029226}
   - component: {fileID: 593029225}
+  - component: {fileID: 593029228}
   m_Layer: 2
   m_Name: Trigger Cube
   m_TagString: Untagged
@@ -802,6 +803,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593029223}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &593029228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593029223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ff6515618d54f54b1ef15f1dcff2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - {fileID: 1183607691}
 --- !u!1 &723334726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1507,7 @@ GameObject:
   - component: {fileID: 1183607696}
   - component: {fileID: 1183607695}
   - component: {fileID: 1183607694}
+  - component: {fileID: 1183607693}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1513,6 +1528,18 @@ Transform:
   m_Father: {fileID: 1390846386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183607693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183607691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e40335b8f7044e8e9897b7c2c2ad0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doorPosition: {x: 0, y: -2.9, z: 0}
 --- !u!65 &1183607694
 BoxCollider:
   m_ObjectHideFlags: 0
