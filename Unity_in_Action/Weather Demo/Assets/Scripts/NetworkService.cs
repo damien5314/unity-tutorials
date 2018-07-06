@@ -31,4 +31,13 @@ public class NetworkService
 
 		callback(www.text);
 	}
+
+	public IEnumerator DownloadImage(string url, Action<Texture2D> callback)
+	{
+		WWW www = new WWW(url);
+		yield return www;
+		
+		// FIXME: Why don't we need error handling here?
+		callback(www.texture);
+	}
 }
