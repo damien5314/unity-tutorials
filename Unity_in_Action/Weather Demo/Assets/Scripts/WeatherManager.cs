@@ -1,14 +1,16 @@
 ﻿using System.Collections;
+using System.Security.Policy;
 using UnityEngine;
 
 public class WeatherManager : MonoBehaviour, IGameManager {
 
 	public const string WeatherEndpoint =
-		"https://api.openweathermap.org/data/2.5/weather?q=Chicago,us&appid=c54203e013cb940efbc7d5a2fcc46b1b";
+		"https://api.openweathermap.org/data/2.5/weather?q=Osaka&appid=c54203e013cb940efbc7d5a2fcc46b1b";
 	
 	public ManagerStatus Status { get; private set; }
-	
-	// Add cloud value here (listing 9.8)
+
+	public float CloudValue { get; private set; }
+
 	private NetworkService _network;
 	
 	public void Startup(NetworkService service)
@@ -16,19 +18,21 @@ public class WeatherManager : MonoBehaviour, IGameManager {
 		Debug.Log("Weather manager starting...");
 		
 		_network = service;
-		StartCoroutine(GetWeatherXml());
+		StartCoroutine(GetWeatherData());
 
 		Status = ManagerStatus.Initializing;
 	}
 
-	private IEnumerator GetWeatherXml()
+	private IEnumerator GetWeatherData()
 	{
-		return _network.CallApi(WeatherEndpoint, OnXmlDataLoaded);
+		return _network.CallApi(WeatherEndpoint, OnWeatherDataLoaded);
 	}
 
-	private void OnXmlDataLoaded(string data)
+	private void OnWeatherDataLoaded(string data)
 	{
-		Debug.Log(data);
+		WeatherJson weatherData = JsonUtility.FromJson<WeatherJson>(data);
+		CloudValue = weatherData.clouds.all / 100f;
+		Messenger.Broadcast(GameEvent.WeatherUpdated);
 
 		Status = ManagerStatus.Started;
 	}
