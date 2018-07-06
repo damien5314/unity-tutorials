@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Security.Policy;
 using UnityEngine;
 
 public class WeatherManager : MonoBehaviour, IGameManager {

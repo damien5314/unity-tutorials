@@ -4,23 +4,29 @@ using UnityEngine;
 public class WeatherController : MonoBehaviour
 {
 	
-	private const float CloudIncrement = 0.005f;
-
 	[SerializeField] private Material _sky;
 	[SerializeField] private Light _sun;
 
 	private float _fullIntensity;
-	private float _cloudValue = 0f;
+
+	private void Awake()
+	{
+		Messenger.AddListener(GameEvent.WeatherUpdated, OnWeatherUpdated);
+	}
+
+	private void OnDestroy()
+	{
+		Messenger.RemoveListener(GameEvent.WeatherUpdated, OnWeatherUpdated);
+	}
 
 	private void Start()
 	{
 		_fullIntensity = _sun.intensity;
 	}
 
-	private void Update()
+	private void OnWeatherUpdated()
 	{
-		SetOvercast(_cloudValue);
-		_cloudValue += CloudIncrement;
+		SetOvercast(GameManagers.Weather.CloudValue);
 	}
 
 	private void SetOvercast(float value)
