@@ -2,24 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(WeatherManager))]
-[RequireComponent(typeof(ImagesManager))]
+[RequireComponent(typeof(AudioManager))]
 public class GameManagers : MonoBehaviour
 {
 
-	public static WeatherManager Weather { get; private set; }
-	public static ImagesManager Images { get; private set; }
+	public static AudioManager AudioManager { get; private set; }
 
 	private List<IGameManager> _startSequence;
 
 	private void Awake()
 	{
-		Weather = GetComponent<WeatherManager>();
-		Images = GetComponent<ImagesManager>();
-		
-		_startSequence = new List<IGameManager>();
-		_startSequence.Add(Weather);
-		_startSequence.Add(Images);
+		AudioManager = GetComponent<AudioManager>();
+
+		_startSequence = new List<IGameManager> { AudioManager };
 
 		StartCoroutine(StartupManagers());
 	}
