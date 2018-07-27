@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-
 	public int Health = 5;
-	
+
 	private int _remainingHealth;
 
 	void Start()

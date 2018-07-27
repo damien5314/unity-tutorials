@@ -2,7 +2,6 @@
 
 public static class SettingsManager
 {
-
 	private const string PrefsName = "prefs_name";
 	private const string PrefsSpeed = "prefs_speed";
 

@@ -2,9 +2,8 @@
 
 public class FpsMovement : MonoBehaviour
 {
-
 	public const float BaseSpeed = 6.0f;
-	
+
 	public float MovementSpeed = 6.0f;
 	public float Gravity = -9.8f;
 

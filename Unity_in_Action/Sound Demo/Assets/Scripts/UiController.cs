@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class UiController : MonoBehaviour
 {
-
 	[SerializeField] private Text _scoreLabel;
 	[SerializeField] private SettingsMenu _settingsMenu;
 
@@ -23,7 +22,7 @@ public class UiController : MonoBehaviour
 	{
 		_score = 0;
 		_scoreLabel.text = _score.ToString();
-		
+
 		_settingsMenu.Close();
 	}
 

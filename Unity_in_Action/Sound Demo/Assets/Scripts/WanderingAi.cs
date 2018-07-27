@@ -6,9 +6,8 @@ using Random = UnityEngine.Random;
 
 public class WanderingAi : MonoBehaviour
 {
-
 	public const float BaseSpeed = 3.0f;
-	
+
 	public float Speed = 3.0f;
 	public float ObstacleRange = 5.0f;
 
@@ -38,7 +37,7 @@ public class WanderingAi : MonoBehaviour
 		if (_alive)
 		{
 			transform.Translate(0, 0, Speed * Time.deltaTime);
-		
+
 			Ray ray = new Ray(transform.position, transform.forward);
 			RaycastHit hit;
 			if (Physics.SphereCast(ray, 0.75f, out hit))

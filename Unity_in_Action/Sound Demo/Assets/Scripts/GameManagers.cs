@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(AudioManager))]
 public class GameManagers : MonoBehaviour
 {
-
 	public static AudioManager AudioManager { get; private set; }
 
 	private List<IGameManager> _startSequence;
@@ -14,7 +13,7 @@ public class GameManagers : MonoBehaviour
 	{
 		AudioManager = GetComponent<AudioManager>();
 
-		_startSequence = new List<IGameManager> { AudioManager };
+		_startSequence = new List<IGameManager> {AudioManager};
 
 		StartCoroutine(StartupManagers());
 	}
@@ -22,7 +21,7 @@ public class GameManagers : MonoBehaviour
 	private IEnumerator StartupManagers()
 	{
 		NetworkService networkService = new NetworkService();
-		
+
 		foreach (IGameManager manager in _startSequence)
 		{
 			manager.Startup(networkService);
@@ -50,7 +49,7 @@ public class GameManagers : MonoBehaviour
 			{
 				Debug.Log("Progress: " + numReady + " / " + numModules);
 			}
-			
+
 			yield return null;
 		}
 

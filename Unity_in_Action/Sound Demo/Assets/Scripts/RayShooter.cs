@@ -5,11 +5,10 @@ using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
-
 	[SerializeField] private AudioSource _soundSource;
 	[SerializeField] private AudioClip _hitWallSound;
 	[SerializeField] private AudioClip _hitEnemySound;
-	
+
 	private Camera _camera;
 
 	// Use this for initialization

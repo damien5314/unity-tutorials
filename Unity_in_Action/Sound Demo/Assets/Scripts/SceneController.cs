@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-
 	[SerializeField] private GameObject _enemyPrefab;
 	private GameObject _enemy;
 

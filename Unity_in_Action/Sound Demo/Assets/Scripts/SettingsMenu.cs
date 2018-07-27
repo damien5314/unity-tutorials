@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-
 	private void Start()
 	{
 	}
