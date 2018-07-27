@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour, IGameManager
 
 	private NetworkService _network;
 
-	// Add volume controls here (listing 10.4)
+	[SerializeField] private AudioSource _soundSource;
 
 	public void Startup(NetworkService service)
 	{
@@ -31,5 +31,10 @@ public class AudioManager : MonoBehaviour, IGameManager
 		// Initialize music sources here (listing 10.10)
 
 		Status = ManagerStatus.Started;
+	}
+
+	public void PlaySound(AudioClip clip)
+	{
+		_soundSource.PlayOneShot(clip);
 	}
 }
