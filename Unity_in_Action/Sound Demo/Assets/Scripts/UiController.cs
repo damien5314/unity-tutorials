@@ -22,20 +22,32 @@ public class UiController : MonoBehaviour
 	{
 		_score = 0;
 		_scoreLabel.text = _score.ToString();
-
-		_settingsMenu.Close();
+		
+		ShowSettingsMenu(false);
 	}
 
-	// This isn't actually in Unity in Action but I got rid of the close button and this just works better
-	public void OnToggleSettings()
+	private void Update()
 	{
-		if (_settingsMenu.isActiveAndEnabled)
+		if (Input.GetKeyDown(KeyCode.M))
 		{
-			_settingsMenu.Close();
+			bool isShowing = _settingsMenu.gameObject.activeSelf;
+			ShowSettingsMenu(!isShowing);
+		}
+	}
+
+	private void ShowSettingsMenu(bool show)
+	{
+		_settingsMenu.gameObject.SetActive(show);
+
+		if (show)
+		{
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 		}
 		else
 		{
-			_settingsMenu.Open();
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 		}
 	}
 

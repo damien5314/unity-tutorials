@@ -3,16 +3,6 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-	
-	public void Open()
-	{
-		gameObject.SetActive(true);
-	}
-
-	public void Close()
-	{
-		gameObject.SetActive(false);
-	}
 
 	public void OnSoundToggle()
 	{
