@@ -26,9 +26,17 @@ public class UiController : MonoBehaviour
 		_settingsMenu.Close();
 	}
 
-	public void OnOpenSettings()
+	// This isn't actually in Unity in Action but I got rid of the close button and this just works better
+	public void OnToggleSettings()
 	{
-		_settingsMenu.Open();
+		if (_settingsMenu.isActiveAndEnabled)
+		{
+			_settingsMenu.Close();
+		}
+		else
+		{
+			_settingsMenu.Open();
+		}
 	}
 
 	private void OnEnemyHit()
