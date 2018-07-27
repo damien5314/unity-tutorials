@@ -5,15 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(AudioManager))]
 public class GameManagers : MonoBehaviour
 {
-	public static AudioManager AudioManager { get; private set; }
+	public static AudioManager Audio { get; private set; }
 
 	private List<IGameManager> _startSequence;
 
 	private void Awake()
 	{
-		AudioManager = GetComponent<AudioManager>();
+		Audio = GetComponent<AudioManager>();
 
-		_startSequence = new List<IGameManager> {AudioManager};
+		_startSequence = new List<IGameManager> {Audio};
 
 		StartCoroutine(StartupManagers());
 	}
