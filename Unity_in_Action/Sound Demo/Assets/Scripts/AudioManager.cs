@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour, IGameManager
 
 		_network = service;
 
+		SoundVolume = 1.0f;
+
 		// Initialize music sources here (listing 10.10)
 
 		Status = ManagerStatus.Started;
