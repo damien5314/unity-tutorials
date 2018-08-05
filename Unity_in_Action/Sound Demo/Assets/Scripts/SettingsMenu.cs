@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System;
+using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -15,5 +15,25 @@ public class SettingsMenu : MonoBehaviour
 	public void OnSoundValue(float volume)
 	{
 		GameManagers.Audio.SoundVolume = volume;
+	}
+
+	public void OnPlayMusic(int selector)
+	{
+		GameManagers.Audio.PlaySound(_sound);
+
+		switch (selector)
+		{
+			case 1:
+				GameManagers.Audio.PlayIntroMusic();
+				break;
+			case 2:
+				GameManagers.Audio.PlayLevelMusic();
+				break;
+			case 3:
+				GameManagers.Audio.StopMusic();
+				break;
+			default:
+				throw new ArgumentException("Unexpected selector: " + selector);
+		}
 	}
 }

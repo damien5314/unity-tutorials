@@ -4,6 +4,10 @@ public class AudioManager : MonoBehaviour, IGameManager
 {
 	public ManagerStatus Status { get; private set; }
 
+	[SerializeField] private AudioSource _music1Source;
+	[SerializeField] private string _introBgMusic;
+	[SerializeField] private string _levelBgMusic;
+
 	public float SoundVolume
 	{
 		get { return AudioListener.volume; }
@@ -36,5 +40,26 @@ public class AudioManager : MonoBehaviour, IGameManager
 	public void PlaySound(AudioClip clip)
 	{
 		_soundSource.PlayOneShot(clip);
+	}
+
+	public void PlayIntroMusic()
+	{
+		PlayMusic(Resources.Load("Music/" + _introBgMusic) as AudioClip);
+	}
+
+	public void PlayLevelMusic()
+	{
+		PlayMusic(Resources.Load("Music/" + _levelBgMusic) as AudioClip);
+	}
+
+	private void PlayMusic(AudioClip audioClip)
+	{
+		_music1Source.clip = audioClip;
+		_music1Source.Play();
+	}
+
+	public void StopMusic()
+	{
+		_music1Source.Stop();
 	}
 }
