@@ -9,10 +9,14 @@ public class InventoryManager : MonoBehaviour, IGameManager
 	private Dictionary<string, int> _items;
 	public string equippedItem { get; private set; }
 
-	public void Startup()
+	private NetworkService _network;
+
+	public void Startup(NetworkService service)
 	{
 		Debug.Log("Inventory manager starting...");
 
+		_network = service;
+		
 		_items = new Dictionary<string, int>();
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
