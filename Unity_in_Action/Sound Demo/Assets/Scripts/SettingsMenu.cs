@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SettingsMenu : MonoBehaviour
 {
-
 	[SerializeField] private AudioClip _sound;
 
 	public void OnSoundToggle()

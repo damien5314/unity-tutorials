@@ -22,7 +22,7 @@ public class UiController : MonoBehaviour
 	{
 		_score = 0;
 		_scoreLabel.text = _score.ToString();
-		
+
 		ShowSettingsMenu(false);
 	}
 

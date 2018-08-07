@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour, IGameManager
 			{
 				return _music1Source.mute;
 			}
+
 			return false;
 		}
 		set
