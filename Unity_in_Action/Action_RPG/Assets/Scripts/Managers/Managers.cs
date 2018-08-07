@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
 [RequireComponent(typeof(InventoryManager))]
@@ -26,7 +26,7 @@ public class Managers : MonoBehaviour
 	private IEnumerator StartupManagers()
 	{
 		NetworkService service = new NetworkService();
-		
+
 		foreach (IGameManager manager in _startSequence)
 		{
 			manager.Startup(service);

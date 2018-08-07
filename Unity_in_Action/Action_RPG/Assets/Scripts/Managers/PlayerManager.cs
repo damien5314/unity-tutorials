@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class PlayerManager : MonoBehaviour, IGameManager
 {
@@ -16,7 +14,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
 		Debug.Log("Player manager starting...");
 
 		_network = service;
-		
+
 		// these values could be initialized with saved data
 		health = 50;
 		maxHealth = 100;

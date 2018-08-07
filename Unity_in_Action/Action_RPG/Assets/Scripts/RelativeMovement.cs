@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 // 3rd-person movement that picks direction relative to target (usually the camera)
 // commented lines demonstrate snap to direction and without ground raycast

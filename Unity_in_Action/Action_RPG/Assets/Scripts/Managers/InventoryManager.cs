@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, IGameManager
 {
@@ -16,7 +15,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
 		Debug.Log("Inventory manager starting...");
 
 		_network = service;
-		
+
 		_items = new Dictionary<string, int>();
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete

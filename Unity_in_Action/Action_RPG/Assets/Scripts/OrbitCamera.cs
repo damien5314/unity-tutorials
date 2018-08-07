@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 // maintains position offset while orbiting around target
 

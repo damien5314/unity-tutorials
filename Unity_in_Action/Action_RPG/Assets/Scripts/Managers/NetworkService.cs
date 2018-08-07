@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NetworkService
 {
-
 	private bool IsResponseValid(WWW www)
 	{
 		if (www.error != null)
@@ -36,7 +35,7 @@ public class NetworkService
 	{
 		WWW www = new WWW(url);
 		yield return www;
-		
+
 		// FIXME: Why don't we need error handling here?
 		callback(www.texture);
 	}
