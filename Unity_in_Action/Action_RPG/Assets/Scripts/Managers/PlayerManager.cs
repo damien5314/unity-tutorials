@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerManager : MonoBehaviour, IGameManager {
-	public ManagerStatus status {get; private set;}
+public class PlayerManager : MonoBehaviour, IGameManager
+{
+	public ManagerStatus status { get; private set; }
 
-	public int health {get; private set;}
-	public int maxHealth {get; private set;}
+	public int health { get; private set; }
+	public int maxHealth { get; private set; }
 
-	public void Startup() {
+	public void Startup()
+	{
 		Debug.Log("Player manager starting...");
 
 		// these values could be initialized with saved data
@@ -19,11 +21,15 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 		status = ManagerStatus.Started;
 	}
 
-	public void ChangeHealth(int value) {
+	public void ChangeHealth(int value)
+	{
 		health += value;
-		if (health > maxHealth) {
+		if (health > maxHealth)
+		{
 			health = maxHealth;
-		} else if (health < 0) {
+		}
+		else if (health < 0)
+		{
 			health = 0;
 		}
 

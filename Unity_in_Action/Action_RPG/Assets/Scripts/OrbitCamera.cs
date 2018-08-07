@@ -3,7 +3,8 @@ using System.Collections;
 
 // maintains position offset while orbiting around target
 
-public class OrbitCamera : MonoBehaviour {
+public class OrbitCamera : MonoBehaviour
+{
 	[SerializeField] private Transform target;
 
 	public float rotSpeed = 1.5f;
@@ -12,17 +13,22 @@ public class OrbitCamera : MonoBehaviour {
 	private Vector3 _offset;
 
 	// Use this for initialization
-	void Start() {
+	void Start()
+	{
 		_rotY = transform.eulerAngles.y;
 		_offset = target.position - transform.position;
 	}
-	
+
 	// Update is called once per frame
-	void LateUpdate() {
+	void LateUpdate()
+	{
 		float horInput = Input.GetAxis("Horizontal");
-		if (horInput != 0) {
+		if (horInput != 0)
+		{
 			_rotY += horInput * rotSpeed;
-		} else {
+		}
+		else
+		{
 			_rotY += Input.GetAxis("Mouse X") * rotSpeed * 3;
 		}
 

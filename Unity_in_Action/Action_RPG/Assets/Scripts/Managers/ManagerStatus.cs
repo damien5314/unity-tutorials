@@ -1,4 +1,5 @@
-﻿public enum ManagerStatus {
+﻿public enum ManagerStatus
+{
 	Shutdown,
 	Initializing,
 	Started

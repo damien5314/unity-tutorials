@@ -1,5 +1,6 @@
-﻿public interface IGameManager {
-	ManagerStatus status {get;}
+﻿public interface IGameManager
+{
+	ManagerStatus status { get; }
 
 	void Startup();
 }
