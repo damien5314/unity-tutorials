@@ -36,4 +36,15 @@ public class SettingsMenu : MonoBehaviour
 				throw new ArgumentException("Unexpected selector: " + selector);
 		}
 	}
+
+	public void OnMusicToggle()
+	{
+		GameManagers.Audio.MusicMute = !GameManagers.Audio.MusicMute;
+		GameManagers.Audio.PlaySound(_sound);
+	}
+
+	public void OnMusicValue(float volume)
+	{
+		GameManagers.Audio.MusicVolume = volume;
+	}
 }
