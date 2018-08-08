@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PointClickMovement : MonoBehaviour {
@@ -52,7 +53,7 @@ public class PointClickMovement : MonoBehaviour {
 		Vector3 movement = Vector3.zero;
 
 		// Set the target position when we click with left mouse button
-		if (Input.GetMouseButton((int) MouseButton.LEFT))
+		if (Input.GetMouseButton((int) MouseButton.LEFT) && !EventSystem.current.IsPointerOverGameObject())
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit mouseHit;
