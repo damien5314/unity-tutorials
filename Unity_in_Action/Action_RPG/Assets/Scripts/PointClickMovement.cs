@@ -108,15 +108,7 @@ public class PointClickMovement : MonoBehaviour {
 		// could _charController.isGrounded instead, but then cannot workaround dropoff edge
 		if (hitGround)
 		{
-			if (Input.GetButtonDown("Jump"))
-			{
-				_vertSpeed = jumpSpeed;
-			}
-			else
-			{
-				_vertSpeed = minFall;
-				_animator.SetBool("Jumping", false);
-			}
+			_vertSpeed = minFall;
 		}
 		else
 		{
@@ -124,12 +116,6 @@ public class PointClickMovement : MonoBehaviour {
 			if (_vertSpeed < terminalVelocity)
 			{
 				_vertSpeed = terminalVelocity;
-			}
-
-			if (_contact != null)
-			{
-				// not right at level start
-				_animator.SetBool("Jumping", true);
 			}
 
 			// workaround for standing on dropoff edge
