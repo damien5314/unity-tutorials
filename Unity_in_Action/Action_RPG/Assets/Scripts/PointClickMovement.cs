@@ -58,8 +58,12 @@ public class PointClickMovement : MonoBehaviour {
 			RaycastHit mouseHit;
 			if (Physics.Raycast(ray, out mouseHit))
 			{
-				_targetPosition = mouseHit.point;
-				_currentSpeed = moveSpeed;
+				GameObject hitObject = mouseHit.transform.gameObject;
+				if (hitObject.layer == LayerMask.NameToLayer("Ground"))
+				{
+					_targetPosition = mouseHit.point;
+					_currentSpeed = moveSpeed;
+				}
 			}
 		}
 
