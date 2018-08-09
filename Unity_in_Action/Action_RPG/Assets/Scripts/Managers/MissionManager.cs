@@ -44,4 +44,11 @@ public class MissionManager : MonoBehaviour, IGameManager
 		// could have logic to handle multiple objectives
 		Messenger.Broadcast(GameEvent.LEVEL_COMPLETE);
 	}
+
+	public void RestartCurrent()
+	{
+		string levelName = "Level" + CurrentLevel;
+		Debug.Log("Restarting " + levelName);
+		SceneManager.LoadScene(levelName);
+	}
 }
