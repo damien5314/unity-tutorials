@@ -38,4 +38,10 @@ public class MissionManager : MonoBehaviour, IGameManager
 			Debug.Log("Last level");
 		}
 	}
+
+	public void ReachObjective()
+	{
+		// could have logic to handle multiple objectives
+		Messenger.Broadcast(GameEvent.LEVEL_COMPLETE);
+	}
 }
