@@ -2,7 +2,7 @@
 
 public class PlayerManager : MonoBehaviour, IGameManager
 {
-	public ManagerStatus status { get; private set; }
+	public ManagerStatus Status { get; private set; }
 
 	public int health { get; private set; }
 	public int maxHealth { get; private set; }
@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
 		maxHealth = 100;
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
-		status = ManagerStatus.Started;
+		Status = ManagerStatus.Started;
 	}
 
 	public void ChangeHealth(int value)

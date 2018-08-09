@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, IGameManager
 {
-	public ManagerStatus status { get; private set; }
+	public ManagerStatus Status { get; private set; }
 
 	private Dictionary<string, int> _items;
 	public string equippedItem { get; private set; }
@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
 		_items = new Dictionary<string, int>();
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
-		status = ManagerStatus.Started;
+		Status = ManagerStatus.Started;
 	}
 
 	private void DisplayItems()
