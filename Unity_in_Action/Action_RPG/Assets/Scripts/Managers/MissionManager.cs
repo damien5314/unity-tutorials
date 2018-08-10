@@ -17,7 +17,7 @@ public class MissionManager : MonoBehaviour, IGameManager
 
 		_network = service;
 
-		UpdateData(0, 1);
+		UpdateData(0, 3);
 		
 		Status = ManagerStatus.Started;
 	}
