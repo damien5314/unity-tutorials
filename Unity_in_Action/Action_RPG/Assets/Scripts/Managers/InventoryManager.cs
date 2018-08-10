@@ -16,10 +16,20 @@ public class InventoryManager : MonoBehaviour, IGameManager
 
 		_network = service;
 
-		_items = new Dictionary<string, int>();
+		UpdateData(new Dictionary<string, int>());
 
 		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
 		Status = ManagerStatus.Started;
+	}
+
+	public void UpdateData(Dictionary<string, int> items)
+	{
+		_items = items;
+	}
+
+	public Dictionary<string, int> GetData()
+	{
+		return _items;
 	}
 
 	private void DisplayItems()

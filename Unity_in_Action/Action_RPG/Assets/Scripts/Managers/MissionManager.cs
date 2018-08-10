@@ -17,10 +17,15 @@ public class MissionManager : MonoBehaviour, IGameManager
 
 		_network = service;
 
-		CurrentLevel = 0;
-		MaxLevel = 1;
+		UpdateData(0, 1);
 		
 		Status = ManagerStatus.Started;
+	}
+
+	public void UpdateData(int currentLevel, int maxLevel)
+	{
+		CurrentLevel = currentLevel;
+		MaxLevel = maxLevel;
 	}
 
 	public void GoToNext()
