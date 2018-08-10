@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InventoryPopup : MonoBehaviour
 {
-
 	[SerializeField] private Image[] _itemIcons;
 	[SerializeField] private Text[] _itemLabels;
 

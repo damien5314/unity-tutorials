@@ -2,8 +2,8 @@
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
-public class PointClickMovement : MonoBehaviour {
-
+public class PointClickMovement : MonoBehaviour 
+{
 	/// <summary>
 	/// Enum representing integer constants returned from <see cref="Input.GetMouseButton"/>.
 	/// </summary>
