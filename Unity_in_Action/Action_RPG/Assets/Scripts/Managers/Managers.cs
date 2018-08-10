@@ -19,10 +19,10 @@ public class Managers : MonoBehaviour
 	{
 		DontDestroyOnLoad(gameObject);
 		
+		Data = GetComponent<DataManager>();
 		Player = GetComponent<PlayerManager>();
 		Inventory = GetComponent<InventoryManager>();
 		Mission = GetComponent<MissionManager>();
-		Data = GetComponent<DataManager>();
 		
 		_startSequence = new List<IGameManager>();
 		_startSequence.Add(Player);
