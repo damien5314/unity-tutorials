@@ -9,13 +9,9 @@ public class DataManager : MonoBehaviour, IGameManager
 
 	private string _filename;
 
-	private NetworkService _network;
-	
-	public void Startup(NetworkService service)
+	public void Startup()
 	{
 		Debug.Log("Data manager starting");
-
-		_network = service;
 
 		_filename = Path.Combine(Application.persistentDataPath, "game.dat");
 

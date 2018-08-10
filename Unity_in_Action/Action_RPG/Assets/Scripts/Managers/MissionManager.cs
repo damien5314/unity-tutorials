@@ -9,13 +9,9 @@ public class MissionManager : MonoBehaviour, IGameManager
 	public int CurrentLevel { get; private set; }
 	public int MaxLevel { get; private set; }
 
-	private NetworkService _network;
-	
-	public void Startup(NetworkService service)
+	public void Startup()
 	{
 		Debug.Log("Mission manager starting...");
-
-		_network = service;
 
 		UpdateData(0, 3);
 		
