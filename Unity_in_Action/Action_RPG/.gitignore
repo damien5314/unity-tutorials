@@ -40,6 +40,7 @@ sysinfo.txt
 
 # End of https://www.gitignore.io/api/unity
 
+build/
 
 # Jetbrains Rider
 .idea/
