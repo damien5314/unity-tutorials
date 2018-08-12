@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class TestPlugin : MonoBehaviour
@@ -29,6 +30,44 @@ public class TestPlugin : MonoBehaviour
 
 	#endregion iOS
 
+#if UNITY_ANDROID
+
+	private static Exception _pluginError;
+	private static AndroidJavaClass _pluginClass;
+
+	private static AndroidJavaClass GetPluginClass()
+	{
+		if (_pluginClass == null && _pluginError == null)
+		{
+			AndroidJNI.AttachCurrentThread();
+			try
+			{
+				_pluginClass = new AndroidJavaClass("ddiehl.uia.TestPlugin");
+			}
+			catch (Exception e)
+			{
+				_pluginError = e;
+			}
+		}
+
+		return _pluginClass;
+	}
+
+	private static AndroidJavaObject _unityActivity;
+
+	private static AndroidJavaObject GetUnityActivity()
+	{
+		if (_unityActivity == null)
+		{
+			AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			_unityActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+		}
+
+		return _unityActivity;
+	}
+
+#endif
+
 	public static float TestNumber()
 	{
 		float val = 0f;
@@ -37,6 +76,12 @@ public class TestPlugin : MonoBehaviour
 			val = _TestNumber();
 		}
 
+#if UNITY_ANDROID
+		if (!Application.isEditor && _pluginError == null)
+		{
+			val = GetPluginClass().CallStatic<int>("getNumber");
+		}
+#endif
 		return val;
 	}
 
@@ -47,6 +92,13 @@ public class TestPlugin : MonoBehaviour
 		{
 			val = _TestString(test);
 		}
+
+#if UNITY_ANDROID
+		if (!Application.isEditor && _pluginError == null)
+		{
+			val = GetPluginClass().CallStatic<string>("getString", test);
+		}
+#endif
 
 		return val;
 	}
